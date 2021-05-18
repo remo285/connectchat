@@ -26,6 +26,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - name: Delete branch
+        uses: dawidd6/action-delete-branch@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branches: action-test
+          suffix: -done
       - name: Create Branch
         uses: peterjgrainger/action-create-branch@v2.0.1
         env:
