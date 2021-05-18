@@ -38,7 +38,7 @@ jobs:
        # with:
          # branch: 'action-test'    
       - name: Push to built branch
-        uses: Automattic/action-commit-to-branch@master
+        uses: remo285/action-commit-to-branch@master
         with:
           branch: 'action-test'
           commit_message: 'update build'
